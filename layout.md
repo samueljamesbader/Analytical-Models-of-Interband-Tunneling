@@ -1,2 +1,2 @@
 untitled.tex
-section_Sze_Reduction_to_a__.tex
+section_Sze_s_WKB_method__.tex
