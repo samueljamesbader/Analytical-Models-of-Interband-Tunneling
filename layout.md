@@ -1,2 +1,2 @@
 untitled.tex
-section_Reduction_to_a_scattering__.tex
+section_Sze_Reduction_to_a__.tex
