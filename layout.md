@@ -1,4 +1,5 @@
 untitled.tex
+section_Introduction_Given_the_difficulty__.tex
 section_Sze_s_WKB_method__.tex
 subsection_Reduction_to_a_scattering__.tex
 subsection_Approach_to_generalize_Computationally__.tex
