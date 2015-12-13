@@ -5,5 +5,6 @@ section_Sze_s_WKB_method__.tex
 subsection_Reduction_to_a_scattering__.tex
 section_GaN_Bandstructure_Sze_simplifies__.tex
 figures/ComplexBS/ComplexBS.png
+Computationally_this_method_is_straightforward__.tex
 section_Kane_s_model_Whereas__.tex
 section_Summary_and_Directions_We__.tex
