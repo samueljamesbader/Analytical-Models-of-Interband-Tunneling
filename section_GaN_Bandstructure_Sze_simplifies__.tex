@@ -1,5 +1,5 @@
 \section{GaN Bandstructure}
-Sze simplifies the problem by using a parabola with curvature set by the effective mass for the dispersion, but one really should use the material-appropriate imaginary bandstructure in the gap, as shown in \ref{fig:imagBS}.  In order have a usable form for the bandstructure, I've taken the 4x4 $k\cdot p$ Hamiltonian from \cite{Rinke_2008}, and specified it to the $\hat{z}$ direction, which removes most of the off-diagonal matrix elements.  In fact, along the $z$-axis, the Hamiltonian can be reduced to an effective two-band model (similar to but more general than \cite{Kane_1960}.
+Sze simplifies the problem by using a parabola with curvature set by the effective mass for the dispersion, but one really should use the material-appropriate imaginary bandstructure in the gap, as shown in \ref{fig:imagBS}.  In order have a usable form for the bandstructure, we may taken the 4x4 $k\cdot p$ Hamiltonian from \cite{Rinke_2008}, and specify it to the $\hat{z}$ direction, which removes most of the off-diagonal matrix elements.  In fact, along the $z$-axis, the Hamiltonian can be reduced to an effective two-band model (similar to but more general than \cite{Kane_1960}.
 \[
   H=\begin{pmatrix}
     E_g'+\frac{\hbar^2k_z^2}{2m_e} & iP_1k_z\\
@@ -15,8 +15,12 @@ where
 \frac{1}{m_r}\equiv\frac{1}{m_e}+\frac{1}{m_h}
 \]
 and the undefined variables above are parameters given in \cite{Rinke_2008}.  The band connection in imaginary $k$-space can then be written analytically:
-$$k_z=i\sqrt{A(E)+\sqrt{A(E)^2+B(E)}}$$
+$$k_z(E)=i\sqrt{A(E)+\sqrt{A(E)^2+B(E)}}$$
 $$\quad A(E)=\frac{m_eEg'}{\hbar^2}-\frac{2m_em_hP_1^2}{\hbar^4}-\frac{m_em_hE}{m_r\hbar^2}$$
 $$\quad B(E)=\frac{4m_em_hE(E_g'-E)}{\hbar^4}$$
+
+where $E$ is the energy above the valence band-edge. Much like in Sze's model, adding additional transverse momentum ($x$-$y$) increases the imaginary $k_z$ inside the gap, which will exponentially reduce the tunneling current contribution from those states.  So, incorporating the contribution from all states with finite transverse momentum requires only an expression that is valid for small transverse momentum $k_p$.  We have not derived a formal expression, but assuming that $k_p$ just broadens the effective band gap by $a(k_p)$ and shifts the $k_z$ up by $b(k_p)$, ie
+$$k_z(E,k_p)\approx k_z(E/a(k_p))+b(k_p)$$
+we can fit $a(k_p)$ and $b(k_p)$ as quadratic expressions to the eigenvalues and achieve workable agreement.
 
 
