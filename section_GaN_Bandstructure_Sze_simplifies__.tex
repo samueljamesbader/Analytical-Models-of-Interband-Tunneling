@@ -1,5 +1,14 @@
 \section{GaN Bandstructure}
-Sze simplifies the problem by using a parabola with curvature set by the effective mass for the dispersion, but one really should use the material-appropriate imaginary bandstructure in the gap, as shown in \ref{fig:imagBS}.  In order have a usable form for the bandstructure, we may taken the 4x4 $k\cdot p$ Hamiltonian from \cite{Rinke_2008}, and specify it to the $\hat{z}$ direction, which removes most of the off-diagonal matrix elements.  In fact, along the $z$-axis, the Hamiltonian can be reduced to an effective two-band model (similar to but more general than \cite{Kane_1960}.
+Sze simplifies the problem by using a parabola with curvature set by the effective mass for the dispersion, but one really should use the material-appropriate imaginary bandstructure in the gap, as shown in \ref{fig:imagBS}.  In order have a usable form for the bandstructure, we may taken the 4x4 $k\cdot p$ Hamiltonian from \cite{Rinke_2008}, and specify it to the $\hat{z}$ direction, which removes most of the off-diagonal matrix elements.
+\[
+  H=\begin{pmatrix}
+    E_g+\Delta_{CR}+\frac{\hbar^2k_z^2}{2m_0}+A_1'k_z^2 & 0 & 0 &iP_1k_z\\
+    0 &  \Delta_{CR}+\frac{\hbar^2k_z^2}{2m_0}+M_2k_z^2 & 0 & 0 \\
+    0 & 0 & \Delta_{CR}+\frac{\hbar^2k_z^2}{2m_0}+M_2k_z^2 & 0 \\
+    -iP_1k_z & 0 & 0 & \frac{\hbar^2k_z^2}{2m_0}+L_2'k_z^2  \\
+  \end{pmatrix}
+\]
+Along this direction, the center 2x2 of the matrix (which form the light and heavy hole bands in real $k$-space) is uncoupled to the outside 2x2 (which form the conduction and split-off band).  So, along the $z$-axis, the Hamiltonian can be reduced to an effective two-band model (similar to but more general than \cite{Kane_1960}).
 \[
   H=\begin{pmatrix}
     E_g'+\frac{\hbar^2k_z^2}{2m_e} & iP_1k_z\\
@@ -14,12 +23,14 @@ where
   E_g'\equiv E_g+\Delta_{CR}, \quad
 \frac{1}{m_r}\equiv\frac{1}{m_e}+\frac{1}{m_h}
 \]
-and the undefined variables above are parameters given in \cite{Rinke_2008}.  The band connection in imaginary $k$-space can then be written analytically:
+and the undefined variables above are expressed in terms of Luttinger-like parameters by \cite{Rinke_2008}.  Diagonalizing the above, our band connection in imaginary $k$-space can be written analytically:
 $$k_z(E)=i\sqrt{A(E)+\sqrt{A(E)^2+B(E)}}$$
 $$\quad A(E)=\frac{m_eEg'}{\hbar^2}-\frac{2m_em_hP_1^2}{\hbar^4}-\frac{m_em_hE}{m_r\hbar^2}$$
 $$\quad B(E)=\frac{4m_em_hE(E_g'-E)}{\hbar^4}$$
 
-where $E$ is the energy above the valence band-edge. Much like in Sze's model, adding additional transverse momentum ($x$-$y$) increases the imaginary $k_z$ inside the gap, which will exponentially reduce the tunneling current contribution from those states.  So, incorporating the contribution from all states with finite transverse momentum requires only an expression that is valid for small transverse momentum $k_p$.  We have not derived a formal expression, but assuming that $k_p$ just broadens the effective band gap by $a(k_p)$ and shifts the $k_z$ up by $b(k_p)$, ie
+where $E$ is the energy above the valence band-edge.  One subtlety worth noting is that, although we have naively found a connection between the split-off (SO) band and the conduction band (CB), the actual continuous connection is between the light-hole (LH) band and conduction band.  In our model, the SO crosses through the LH to meet the CB, but, were we to account for spin-orbit coupling, this would be an avoided crossing, so the band which shoots up in imaginary $k$-space to meet the CB is continuously connected to the LH band, despite its SO character.  Since this all happens at small $k_z$, and what matters is the whole integral of $k_z$, it's not important to get the avoided crossing correct, so long as we remember that the connection is actually LH-CB.
+
+Much like in Sze's model, adding additional transverse momentum ($x$-$y$) increases the imaginary $k_z$ inside the gap, which will exponentially reduce the tunneling current contribution from those states.  So, incorporating the contribution from all states with finite transverse momentum requires only an expression that is valid for small transverse momentum $k_p$.  We have not derived a formal expression, but assuming that $k_p$ just broadens the effective band gap by $a(k_p)$ and shifts the $k_z$ up by $b(k_p)$, ie
 $$k_z(E,k_p)\approx k_z(E/a(k_p))+b(k_p)$$
 we can fit $a(k_p)$ and $b(k_p)$ as quadratic expressions to the eigenvalues and achieve workable agreement.
 
