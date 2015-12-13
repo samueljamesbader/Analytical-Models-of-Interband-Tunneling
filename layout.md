@@ -3,7 +3,7 @@ Keywords.tex
 section_Introduction_Given_the_difficulty__.tex
 section_Sze_s_WKB_method__.tex
 subsection_Reduction_to_a_scattering__.tex
-subsection_Approach_to_generalize_Computationally__.tex
+section_GaN_Bandstructure_Sze_simplifies__.tex
 figures/ComplexBS/ComplexBS.png
 section_Kane_s_model_Whereas__.tex
 section_Summary_and_Directions_We__.tex
