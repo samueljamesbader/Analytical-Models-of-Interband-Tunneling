@@ -1,5 +1,6 @@
 \section{GaN Bandstructure}
 Sze simplifies the problem by using a parabola with curvature set by the effective mass for the dispersion, but one really should use the material-appropriate imaginary bandstructure in the gap, as shown in \ref{fig:imagBS}.  In order have a usable form for the bandstructure, we may taken the 4x4 $k\cdot p$ Hamiltonian from \cite{Rinke_2008}, and specify it to the $\hat{z}$ direction, which removes most of the off-diagonal matrix elements.
+\begin{widetext}
 \[
   H=\begin{pmatrix}
     E_g+\Delta_{CR}+\frac{\hbar^2k_z^2}{2m_0}+A_1'k_z^2 & 0 & 0 &iP_1k_z\\
@@ -8,6 +9,7 @@ Sze simplifies the problem by using a parabola with curvature set by the effecti
     -iP_1k_z & 0 & 0 & \frac{\hbar^2k_z^2}{2m_0}+L_2'k_z^2  \\
   \end{pmatrix}
 \]
+\end{widetext}
 Along this direction, the center 2x2 of the matrix (which form the light and heavy hole bands in real $k$-space) is uncoupled to the outside 2x2 (which form the conduction and split-off band).  So, along the $z$-axis, the Hamiltonian can be reduced to an effective two-band model (similar to but more general than \cite{Kane_1960}).
 \[
   H=\begin{pmatrix}
